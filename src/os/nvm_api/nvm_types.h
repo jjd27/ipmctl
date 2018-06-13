@@ -118,6 +118,7 @@ typedef signed short NVM_INT16; // 16 bit signed integer
 typedef signed int  NVM_INT32; // 32 bit signed integer
 typedef unsigned char NVM_BOOL; // 8 bit unsigned integer as a boolean
 typedef unsigned char NVM_UINT8; // 8 bit unsigned integer
+#define NVM_UINT8_DEFINED
 typedef unsigned short NVM_UINT16; // 16 bit unsigned integer
 typedef unsigned int NVM_UINT32; // 32 bit unsigned integer
 typedef unsigned long long NVM_UINT64; // 64 bit unsigned integer
@@ -128,6 +129,7 @@ typedef char NVM_ERROR_DESCRIPTION[NVM_ERROR_LEN]; // Return code description
 typedef char NVM_UID[NVM_MAX_UID_LEN]; // Unique ID
 typedef char NVM_PASSPHRASE[NVM_PASSPHRASE_LEN]; // Security passphrase
 typedef char NVM_EVENT_MSG[NVM_EVENT_MSG_LEN]; // Event message string
+#define NVM_EVENT_MSG_DEFINED
 typedef char NVM_EVENT_ARG[NVM_EVENT_ARG_LEN]; // Event argument string
 typedef char NVM_PATH[NVM_PATH_LEN]; // TFile or directory path
 typedef unsigned char NVM_MANUFACTURER[NVM_MANUFACTURER_LEN]; // Manufacturer identifier

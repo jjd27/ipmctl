@@ -99,8 +99,8 @@ else()
 endif()
 
 if(UNIX)
-	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DNO_MSABI_VA_FUNCS -std=c99 -Wformat -Wformat-security -D_XOPEN_SOURCE=500 -Wall -Wfatal-errors -MMD -fPIC")
-	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wformat -Wformat-security -D_XOPEN_SOURCE=500 -Wall -Wfatal-errors -MMD -fPIC")
+	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DNO_MSABI_VA_FUNCS -std=c99 -Wformat -Wformat-security -D_XOPEN_SOURCE=500 -Wall -MMD -fPIC")
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x -Wformat -Wformat-security -D_XOPEN_SOURCE=500 -Wall -MMD -fPIC")
 	set(CMAKE_SHARED_LINKER_FLAGS "-z noexecstack -z relro -z now -pie")
 elseif(MSVC)
 	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /GS /DynamicBase /sdl")
@@ -113,9 +113,6 @@ if(LNX_BUILD)
 		-D_GNU_SOURCE
 		-D__LINUX__
 		)
-
-	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fstack-protector-strong")
-	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fstack-protector-strong")
 endif()
 
 #----------------------------------------------------------------------------------------------------

@@ -116,7 +116,10 @@ typedef struct {
 #define NVM_DIMM_NAME       "Apache Pass DIMM"
 #define MAX_SOURCE_STR_LENGTH    32
 
+#ifndef NVM_EVENT_MSG_DEFINED
 typedef char NVM_EVENT_MSG[NVM_EVENT_MSG_LEN]; // Event message string
+#define NVM_EVENT_MSG_DEFINED
+#endif
 typedef wchar_t NVM_EVENT_MSG_W[NVM_EVENT_MSG_LEN]; // Event message string
 #endif // OS_BUILD
 
@@ -1024,7 +1027,10 @@ typedef struct _HOST_SERVER_INFO
 }HOST_SERVER_INFO;
 #ifdef OS_BUILD
 
+#ifndef NVM_UINT8_DEFINED
 typedef unsigned char NVM_UINT8; // 8 bit unsigned integer
+#define NVM_UINT8_DEFINED
+#endif
 
 typedef struct _PT_PMON_REGISTERS {
   /**

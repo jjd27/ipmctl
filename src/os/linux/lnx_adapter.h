@@ -13,7 +13,7 @@
 
 #include <stddef.h>
 #include <sys/user.h>
-#include <linux/ndctl.h>
+#include "/root/ndctl/ndctl/ndctl.h"
 #include <ndctl/libndctl.h>
 
 #define	SYSFS_ATTR_SIZE 1024
